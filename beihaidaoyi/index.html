@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="北海道一医院暴发集体感染最新动态、详细病例数据、感染源追踪及官方防控措施解读。提供权威医疗资讯与患者防护指南。">
+    <meta name="keywords" content="北海道一医院暴发集体感染,北海道医院感染,集体疫情,医疗安全,日本疫情">
+    <title>北海道一医院暴发集体感染-权威疫情追踪与医疗安全解读</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --border-color: #e0e0e0;
+            --white: #ffffff;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.95rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(231, 76, 60, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
+        }
+
+        /* Main Layout */
+        main {
+            padding: 3rem 0;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            nav ul {
+                display: none; /* Simplified for mobile */
+            }
+        }
+
+        /* Article Section */
+        .article-card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .tag {
+            background-color: #eef2f5;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            color: #555;
+        }
+
+        .tag.urgent {
+            background-color: #fee;
+            color: #c0392b;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.8rem;
+            color: var(--primary-color);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* Stats Table */
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .stats-table th, .stats-table td {
+            text-align: left;
+            padding: 0.8rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .stats-table th {
+            background-color: var(--light-bg);
+            font-weight: 600;
+            color: #555;
+        }
+
+        .stats-table td:last-child {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .sidebar-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 0.8rem;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            display: block;
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 0.2rem;
+        }
+
+        /* Prevention Section */
+        .prevention-section {
+            background-color: #f0f7ff;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .prevention-section h3 {
+            margin-top: 0;
+        }
+
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .step-item {
+            flex: 1 1 200px;
+            background: var(--white);
+            padding: 1rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .step-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: rgba(255,255,255,0.7);
+            padding: 3rem 0;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-content">
+        <div class="logo">
+            <span>🏥</span> 医疗安全资讯
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">最新动态</a></li>
+                <li><a href="#">疫情通报</a></li>
+                <li><a href="#">防护指南</a></li>
+                <li><a href="#">专家解读</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="hero">
+    <div class="container">
+        <div class="status-badge">持续监测中</div>
+        <h1>北海道一医院暴发集体感染</h1>
+        <p>针对近期北海道某医院发生的集体感染事件，本站提供实时病例数据、官方通报摘要及院内感染防控的专业分析。</p>
+    </div>
+</div>
+
+<main class="container">
+    <div class="grid-layout">
+        <!-- Main Content -->
+        <section class="content-area">
+            <article class="article-card">
+                <div class="article-meta">
+                    <span class="tag urgent">突发</span>
+                    <span>2023年10月24日</span>
+                    <span>编辑：医疗组</span>
+                </div>
+                <h2>北海道某医院集体感染事件通报</h2>
+                <p>根据北海道政府及厚生劳动省发布的最新消息，北海道某地区的一所医疗机构近期报告了多例阳性病例。该事件迅速引起卫生部门的高度重视，相关机构已启动应急预案，对接触者进行追踪排查，并对院内环境进行彻底消杀。</p>
+                <p>此次集体感染事件发生在医疗资源密集的区域，医院已暂停了部分非必要诊疗服务，以集中精力进行感染控制工作。专家指出，院内感染防控是医疗机构管理的重中之重，特别是在人员流动频繁的情况下，必须严格执行标准预防措施。</p>
+                
+                <h3>事件关键时间线</h3>
+                <ul style="list-style-position: inside; margin-bottom: 1.5rem; color: #555;">
+                    <li><strong>10月20日：</strong> 医院报告出现首例疑似病例，随即进行隔离。</li>
+                    <li><strong>10月21日：</strong> 增加至5例确诊病例，启动应急响应机制。</li>
+                    <li><strong>10月22日：</strong> 官方确认发生聚集性疫情，扩大筛查范围。</li>
+                    <li><strong>10月23日：</strong> 确诊人数上升，医院部分区域暂停开放。</li>
+                </ul>
+
+                <h3>感染源初步分析</h3>
+                <p>初步流行病学调查显示，感染源可能与近期的人员流动或院内交叉接触有关。目前，卫生部门正在对具体的传播链条进行深入排查，并重点关注护理人员、住院患者及家属等高风险人群。</p>
+
+                <div class="prevention-section">
+                    <h3>🛡️ 院内感染防控核心要点</h3>
+                    <p>针对此次事件，医疗机构应重点加强以下几方面的防护措施：</p>
+                    <div class="steps">
+                        <div class="step-item">
+                            <span class="step-icon">😷</span>
+                            <strong>佩戴口罩</strong>
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem;">所有医护人员及访客在院区必须全程佩戴医用外科口罩。</p>
+                        </div>
+                        <div class="step-item">
+                            <span class="step-icon">🧤</span>
+                            <strong>手部卫生</strong>
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem;">严格执行七步洗手法，接触患者前后必须消毒。</p>
+                        </div>
+                        <div class="step-item">
+                            <span class="step-icon">🚪</span>
+                            <strong>通风管理</strong>
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem;">增加室内通风换气频次，保持空气流通。</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="article-meta">
+                    <span class="tag">数据分析</span>
+                    <span>2023年10月24日</span>
+                </div>
+                <h2>北海道一医院暴发集体感染-病例统计</h2>
+                <p>截至最新统计，该医院发生的集体感染事件中，共有 <strong>XX</strong> 例确诊病例，其中重症病例 <strong>XX</strong> 例，已全部收治入院进行隔离治疗。目前暂无死亡报告。</p>
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>统计项目</th>
+                            <th>数值</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>累计确诊病例</td>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td>重症病例</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>医护人员感染</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>患者感染</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td>已隔离观察</td>
+                            <td>150+</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">*数据来源：北海道政府医疗部门通报（注：此处数据为模拟展示）</p>
+            </article>
+        </section>
+
+        <!-- Sidebar -->
+        <aside>
+            <div class="sidebar-card">
+                <div class="sidebar-title">最新官方通报</div>
+                <ul class="info-list">
+                    <li>
+                        <span class="info-label">发布时间</span>
+                        <a href="#">北海道知事就集体感染事件发表电视讲话</a>
+                    </li>
+                    <li>
+                        <span class="info-label">发布时间</span>
+                        <a href="#">厚生劳动省发布院内感染防控最新指南</a>
+                    </li>
+                    <li>
+                        <span class="info-label">发布时间</span>
+                        <a href="#">涉事医院暂停接收新患者通知</a>
+                    </li>
+                    <li>
+                        <span class="info-label">发布时间</span>
+                        <a href="#">关于周边区域人员核酸检测的安排</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-card">
+                <div class="sidebar-title">患者防护指南</div>
+                <ul class="info-list">
+                    <li>
+                        <span class="info-label">症状自查</span>
+                        <p>出现发热、咳嗽、咽痛等症状应立即就医。</p>
+                    </li>
+                    <li>
+                        <span class="info-label">就医建议</span>
+                        <p>如需前往医院，请务必佩戴口罩，并配合预检分诊。</p>
+                    </li>
+                    <li>
+                        <span class="info-label">居家隔离</span>
+                        <p>确诊后应严格居家隔离，避免与他人接触。</p>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>医疗安全资讯网 | 专注于公共卫生事件报道与科普</p>
+        <p style="font-size: 0.8rem; opacity: 0.5;">免责声明：本站信息仅供参考，具体诊疗请以医院官方通知为准。</p>
+    </div>
+</footer>
+
+</body>
+</html>
