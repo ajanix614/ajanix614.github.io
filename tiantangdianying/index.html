@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天堂电影院 - 经典意大利电影资料与观影指南</title>
+    <meta name="description" content="天堂电影院网站提供关于意大利经典电影《天堂电影院》的详细资料、经典台词赏析、导演背景介绍及观影指南，重温那段关于成长、爱与回忆的感动时光。">
+    <meta name="keywords" content="天堂电影院, 意大利电影, 盘尼西林, 诺瓦里诺, 电影台词, 经典老电影">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #D2691E;
+            --bg-color: #Fdfbf7;
+            --text-color: #333333;
+            --light-text: #666666;
+            --card-bg: #ffffff;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            font-weight: normal;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: var(--text-color);
+        }
+
+        nav a.active {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/cinema/1920/1080.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 60px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 24px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -14px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        .section-link {
+            font-size: 0.9rem;
+            color: var(--light-text);
+        }
+
+        /* Info Grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+        }
+
+        .movie-poster {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .movie-details h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+
+        .meta-tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background-color: #eee;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: #555;
+        }
+
+        .plot-text {
+            color: var(--light-text);
+            text-align: justify;
+        }
+
+        /* Cast Grid */
+        .cast-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .cast-card {
+            text-align: center;
+            background: var(--card-bg);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            border: 1px solid #eee;
+            transition: box-shadow 0.3s;
+        }
+
+        .cast-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .cast-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            background-color: #ddd;
+        }
+
+        .cast-name {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .cast-role {
+            font-size: 0.85rem;
+            color: var(--light-text);
+        }
+
+        /* Quotes Section */
+        .quotes-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .quote-card {
+            background-color: #fff8f0;
+            padding: 24px;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--secondary-color);
+            position: relative;
+        }
+
+        .quote-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #444;
+            margin-bottom: 16px;
+        }
+
+        .quote-source {
+            text-align: right;
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+
+        /* FAQ Section */
+        .faq-list {
+            list-style: none;
+        }
+
+        .faq-item {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            margin-bottom: 12px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-question:hover {
+            background-color: #fafafa;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--light-text);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '−';
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .faq-item:not(.active) .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #ccc;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 8px;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                height: 350px;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                天堂电影院
+                <span>Cinema Paradiso</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#plot">剧情简介</a></li>
+                    <li><a href="#cast">演员表</a></li>
+                    <li><a href="#quotes">经典台词</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>关于爱与成长的电影诗篇</h1>
+                <p>重温朱塞佩·托纳多雷执导的《天堂电影院》，感受阿尔弗雷多对多托的教诲，以及那封未寄出的告别信。</p>
+                <a href="#plot" class="btn">探索电影世界</a>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Info Section -->
+            <section id="plot">
+                <div class="section-header">
+                    <h2 class="section-title">电影简介</h2>
+                </div>
+                <div class="info-grid">
+                    <img src="https://picsum.photos/seed/cinema/600/800.jpg" alt="天堂电影院电影海报" class="movie-poster">
+                    <article class="movie-details">
+                        <h3>天堂电影院</h3>
+                        <div class="meta-tags">
+                            <span class="tag">1988年</span>
+                            <span class="tag">意大利</span>
+                            <span class="tag">剧情 / 爱情</span>
+                            <span class="tag">150 分钟</span>
+                        </div>
+                        <p class="plot-text">
+                            《天堂电影院》是意大利导演朱塞佩·托纳多雷执导的一部经典电影，讲述了意大利西西里岛的一个小村庄里，一位放映师阿尔弗雷多与少年多多之间深厚的师徒情谊。影片通过多多的视角，回顾了他从童年到成年的成长历程，以及他离开故乡去追寻电影梦想的故事。
+                        </p>
+                        <p class="plot-text" style="margin-top: 15px;">
+                            电影不仅描绘了电影的放映历史，更探讨了怀旧、初恋、家庭责任与个人梦想之间的冲突。影片中关于“吻戏剪辑”的情节，成为了影史上最令人难忘的隐喻之一。
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Cast Section -->
+            <section id="cast">
+                <div class="section-header">
+                    <h2 class="section-title">主要演员</h2>
+                    <a href="#" class="section-link">查看全部 &rarr;</a>
+                </div>
+                <div class="cast-grid">
+                    <div class="cast-card">
+                        <img src="https://picsum.photos/seed/actor1/150/150.jpg" alt="菲利浦·诺瓦里诺" class="cast-avatar">
+                        <div class="cast-name">菲利浦·诺瓦里诺</div>
+                        <div class="cast-role">饰 阿尔弗雷多</div>
+                    </div>
+                    <div class="cast-card">
+                        <img src="https://picsum.photos/seed/actor2/150/150.jpg" alt="埃尼奥·巴塔林" class="cast-avatar">
+                        <div class="cast-name">埃尼奥·巴塔林</div>
+                        <div class="cast-role">饰 多多 (童年)</div>
+                    </div>
+                    <div class="cast-card">
+                        <img src="https://picsum.photos/seed/actor3/150/150.jpg" alt="马可·莱昂内" class="cast-avatar">
+                        <div class="cast-name">马可·莱昂内</div>
+                        <div class="cast-role">饰 多多 (成年)</div>
+                    </div>
+                    <div class="cast-card">
+                        <img src="https://picsum.photos/seed/actor4/150/150.jpg" alt="萨瓦托雷·坎佩莱" class="cast-avatar">
+                        <div class="cast-name">萨瓦托雷·坎佩莱</div>
+                        <div class="cast-role">饰 老板</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quotes Section -->
+            <section id="quotes">
+                <div class="section-header">
+                    <h2 class="section-title">经典台词</h2>
+                </div>
+                <div class="quotes-container">
+                    <div class="quote-card">
+                        <p class="quote-text">“生活不是电影，生活比电影苦。”</p>
+                        <p class="quote-source">—— 阿尔弗雷多</p>
+                    </div>
+                    <div class="quote-card">
+                        <p class="quote-text">“如果你不出去走走，你会以为这就是全世界。”</p>
+                        <p class="quote-source">—— 阿尔弗雷多</p>
+                    </div>
+                    <div class="quote-card">
+                        <p class="quote-text">“这里是我唯一能去的地方，这里是我的天堂。”</p>
+                        <p class="quote-source">—— 多多</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section id="faq">
+                <div class="section-header">
+                    <h2 class="section-title">常见问题 (FAQ)</h2>
+                </div>
+                <ul class="faq-list">
+                    <li class="faq-item">
+                        <div class="faq-question">《天堂电影院》的原名是什么？</div>
+                        <div class="faq-answer">电影原名是 *Nuovo Cinema Paradiso*，在意大利语中意为“新天堂电影院”。</div>
+                    </li>
+                    <li class="faq-item">
+                        <div class="faq-question">这部电影获得了哪些奖项？</div>
+                        <div class="faq-answer">该片获得了第61届奥斯卡金像奖最佳外语片奖，以及多项欧洲电影奖。</div>
+                    </li>
+                    <li class="faq-item">
+                        <div class="faq-question">阿尔弗雷多为什么要剪掉所有的吻戏？</div>
+                        <div class="faq-answer">这是为了保护观众，尤其是儿童，避免在电影院里看到不适宜的内容。这也是阿尔弗雷多对多多的保护方式。</div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于天堂电影院</h4>
+                    <p>这是一个致力于分享经典电影文化、提供观影指南和背景资料的网站。我们相信电影是连接过去与未来的桥梁。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">导演介绍</a></li>
+                        <li><a href="#">幕后花絮</a></li>
+                        <li><a href="#">电影原声</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系与合作</h4>
+                    <ul>
+                        <li><a href="#">意见反馈</a></li>
+                        <li><a href="#">版权声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 天堂电影院资料站. All rights reserved. 本站内容仅供学习与交流使用.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
