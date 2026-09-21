@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电影木棉袈裟-经典武侠电影赏析与剧情解析</title>
+    <meta name="description" content="本站专注电影《木棉袈裟》的深度解析，提供影片背景、主要角色分析、经典台词回顾及武侠电影鉴赏指南。">
+    <meta name="keywords" content="电影木棉袈裟, 木棉袈裟剧情, 林青霞赵文卓, 经典武侠电影, 木棉袈裟影评">
+    <style>
+        :root {
+            --primary-color: #8B0000; /* 深红，象征袈裟与热血 */
+            --secondary-color: #2F4F4F; /* 深岩灰，象征沉稳与江湖 */
+            --accent-color: #DAA520; /* 金色，象征佛光与经典 */
+            --bg-color: #F9F5F0; /* 米白，仿古纸张质感 */
+            --text-color: #333;
+            --text-light: #666;
+            --card-bg: #FFFFFF;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-family: "SimSun", serif; /* 宋体更有文化感 */
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/monk/1920/1080.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            font-family: "KaiTi", "STKaiti", serif; /* 楷体更有武侠味 */
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border-radius: 4px;
+            font-weight: bold;
+            border: 1px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: #fff;
+        }
+
+        /* Main Content Layout */
+        main {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-family: "KaiTi", "STKaiti", serif;
+        }
+
+        .section-title .divider {
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 0 auto;
+        }
+
+        /* Synopsis Section */
+        .synopsis-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .movie-poster {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border: 4px solid #fff;
+        }
+
+        .synopsis-text h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 10px;
+        }
+
+        .synopsis-text p {
+            margin-bottom: 15px;
+            text-indent: 2em;
+            color: var(--text-light);
+        }
+
+        /* Cast Section */
+        .cast-section {
+            background-color: #fff;
+            padding: 60px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cast-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .cast-card {
+            text-align: center;
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .cast-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .cast-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid var(--accent-color);
+        }
+
+        .cast-name {
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+
+        .cast-role {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Analysis Section */
+        .analysis-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .article-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .article-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .article-img {
+            width: 120px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+
+        .article-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--text-color);
+        }
+
+        .article-content p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            height: fit-content;
+        }
+
+        .sidebar h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 10px;
+        }
+
+        .quote-box {
+            background-color: #fdf6e3;
+            border-left: 4px solid var(--accent-color);
+            padding: 15px;
+            margin-bottom: 20px;
+            font-style: italic;
+            color: #555;
+        }
+
+        .quote-box p {
+            font-size: 0.95rem;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background-color: #eee;
+            color: #666;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+
+        .footer-col p {
+            color: #ccc;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #888;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .synopsis-grid, .analysis-section {
+                grid-template-columns: 1fr;
+            }
+
+            .article-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo"><span>木棉袈裟</span> 影视赏析</a>
+            <nav>
+                <ul>
+                    <li><a href="#intro">影片简介</a></li>
+                    <li><a href="#cast">主要角色</a></li>
+                    <li><a href="#analysis">深度解析</a></li>
+                    <li><a href="#quotes">经典台词</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>木棉袈裟</h1>
+            <p>一代高僧圆泽与痴情女李红玉的生死绝恋，交织着家国仇恨与佛理禅机的武侠经典。</p>
+            <a href="#intro" class="btn">走进电影世界</a>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- 影片简介 -->
+        <section id="intro" class="synopsis-section">
+            <div class="section-title">
+                <h2>影片简介</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="synopsis-grid">
+                <img src="https://picsum.photos/seed/movies/600/400.jpg" alt="木棉袈裟电影海报示意" class="movie-poster">
+                <div class="synopsis-text">
+                    <h3>江湖恩怨与佛缘宿命</h3>
+                    <p>电影《木棉袈裟》是一部融合了武侠、爱情与宗教哲理的影视作品。故事背景设定在一个动荡的江湖时代，讲述了高僧圆泽（法名）与名门之后李红玉之间一段跨越身份与生死的凄美爱情。</p>
+                    <p>圆泽身为高僧，本应六根清净，却在因缘际会下与李红玉结下不解之缘。随着剧情推进，家族的恩怨、江湖的纷争逐渐浮出水面，使得两人的情感之路充满了坎坷与考验。影片不仅展现了刀光剑影的武侠场面，更深入探讨了在残酷现实面前，个人情感与宗教信仰之间的冲突与抉择。</p>
+                    <p>影片通过“木棉袈裟”这一核心意象，象征着纯洁的爱情与出世的超脱，最终在生离死别中完成了一次心灵的救赎。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 主要演员 -->
+        <section id="cast" class="cast-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>主要角色</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="cast-grid">
+                    <div class="cast-card">
+                        <img src="https://picsum.photos/seed/actor1/200/200.jpg" alt="圆泽演员" class="cast-img">
+                        <div class="cast-name">圆泽法师</div>
+                        <div class="cast-role">男主角 / 高僧</div>
+                    </div>
+                    <div class="cast-card">
+                        <img src="https://picsum.photos/seed/actor2/200/200.jpg" alt="李红玉演员" class="cast-img">
+                        <div class="cast-name">李红玉</div>
+                        <div class="cast-role">女主角 / 名门之后</div>
+                    </div>
+                    <div class="cast-card">
+                        <img src="https://picsum.photos/seed/actor3/200/200.jpg" alt="反派角色" class="cast-img">
+                        <div class="cast-name">反派首领</div>
+                        <div class="cast-role">江湖枭雄</div>
+                    </div>
+                    <div class="cast-card">
+                        <img src="https://picsum.photos/seed/actor4/200/200.jpg" alt="配角" class="cast-img">
+                        <div class="cast-name">老僧</div>
+                        <div class="cast-role">圆泽引路人</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 深度解析与侧边栏 -->
+        <section id="analysis" class="analysis-section">
+            <div class="main-content">
+                <div class="section-title">
+                    <h2>深度解析</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="article-list">
+                    <article class="article-item">
+                        <img src="https://picsum.photos/seed/kungfu/120/80.jpg" alt="武侠风格图片" class="article-img">
+                        <div class="article-content">
+                            <h4>从“木棉袈裟”看武侠电影的美学特征</h4>
+                            <p>木棉袈裟不仅是视觉上的象征，更是武侠电影中“侠”与“僧”双重身份的载体。它代表了在红尘中挣扎的灵魂寻求解脱的渴望，是影片美学意境的核心所在。</p>
+                        </div>
+                    </article>
+                    <article class="article-item">
+                        <img src="https://picsum.photos/seed/love/120/80.jpg" alt="爱情故事" class="article-img">
+                        <div class="article-content">
+                            <h4>圆泽与李红玉：宿命论下的爱情悲剧</h4>
+                            <p>影片中的爱情并非简单的男欢女爱，而是基于前世今生的宿命安排。两人的相遇是劫数，分离是归宿，这种悲剧性的设定使得人物形象更加立体丰满。</p>
+                        </div>
+                    </article>
+                    <article class="article-item">
+                        <img src="https://picsum.photos/seed/temple/120/80.jpg" alt="寺庙场景" class="article-img">
+                        <div class="article-content">
+                            <h4>宗教哲理与江湖侠义的结合</h4>
+                            <p>不同于传统的打打杀杀，本片更侧重于内心戏的刻画。通过寺庙场景的运用，展现了佛法智慧对江湖恩怨的化解作用，探讨了放下执念的深层含义。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <aside class="sidebar">
+                <h3>观影指南</h3>
+                <div class="quote-box">
+                    <p>“佛在心中，不在袈裟。放下屠刀，立地成佛。”</p>
+                    <p style="text-align: right; margin-top: 5px; font-size: 0.8rem; color: #888;">—— 片中经典台词</p>
+                </div>
+                
+                <h3>相关标签</h3>
+                <div class="tag-cloud">
+                    <span class="tag">经典老电影</span>
+                    <span class="tag">武侠爱情</span>
+                    <span class="tag">佛教题材</span>
+                    <span class="tag">宿命论</span>
+                    <span class="tag">高僧</span>
+                    <span class="tag">江湖恩怨</span>
+                </div>
+
+                <div style="margin-top: 30px; padding: 15px; background: #f4f4f4; border-radius: 4px;">
+                    <h4 style="margin-bottom: 10px; font-size: 1rem;">推荐阅读</h4>
+                    <ul style="font-size: 0.9rem; color: #666;">
+                        <li style="margin-bottom: 8px;"><a href="#">如何欣赏佛教题材的武侠片？</a></li>
+                        <li style="margin-bottom: 8px;"><a href="#">林青霞武侠电影全盘点</a></li>
+                        <li><a href="#">“木棉袈裟”意象的文化解读</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </section>
+
+        <!-- 经典台词 -->
+        <section id="quotes" class="section-title" style="text-align: center; margin-top: 60px;">
+            <h2>经典台词</h2>
+            <div class="divider"></div>
+            <div style="max-width: 800px; margin: 30px auto; color: var(--text-light);">
+                <p style="font-size: 1.1rem; margin-bottom: 20px; font-style: italic;">“这红尘滚滚，究竟是谁在造业？又是谁在受苦？”</p>
+                <p style="font-size: 1.1rem; margin-bottom: 20px; font-style: italic;">“你若回头，便是晴天；你若不回，我便成佛。”</p>
+                <p style="font-size: 1.1rem; font-style: italic;">“袈裟虽轻，却承载了千年的因果；红尘虽重，却洗不尽心中的尘埃。”</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于《木棉袈裟》</h4>
+                    <p>本站致力于为影迷提供关于电影《木棉袈裟》的深度资料、剧情解析及人物分析。通过文字的力量，重温那段跨越生死的江湖往事。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul style="line-height: 2;">
+                        <li><a href="#intro">影片简介</a></li>
+                        <li><a href="#cast">主要演员</a></li>
+                        <li><a href="#analysis">深度解析</a></li>
+                        <li><a href="#quotes">经典台词</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>版权声明</h4>
+                    <p>本页面内容仅供学习与交流使用，相关影视资源版权归原作者所有。我们致力于整理优质影评与资料。</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 木棉袈裟影视赏析站. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+</html>
